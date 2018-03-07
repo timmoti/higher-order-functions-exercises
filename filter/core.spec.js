@@ -1,6 +1,6 @@
 var core = require("./core");
 
-describe("Filter", function() {
+describe.skip("Filter", function() {
   describe("#onlyEven()", function() {
     it("returns only those numbers that are even", function() {
       var input = [10, 15, 20, 25, 30, 35];
@@ -11,11 +11,11 @@ describe("Filter", function() {
     });
   });
 
-  describe("#onlyOneWord()", function() {
+  describe("#onlySingleWord()", function() {
     it("returns only those strings with a single word (no spaces)", function() {
       var input = ["return", "phrases", "with one word"];
       var expected = ["return", "phrases"];
-      var actual = core.onlyOneWord(input);
+      var actual = core.onlySingleWord(input);
 
       expect(actual).toEqual(expected);
     });

@@ -1,19 +1,27 @@
 var core = require("./core");
 
-describe("core", function() {
-  it("#allEven", function() {
-    var goodInput = [2, 4, 10];
-    expect(core.allEven(goodInput)).toEqual(true);
+describe.skip("every", function() {
+  describe("#allEven", function() {
+    it("allEven([2, 4, 10]) should return true", function() {
+      var goodInput = [2, 4, 10];
+      expect(core.allEven(goodInput)).toEqual(true);
+    });
 
-    var badInput = [2, 4, 11];
-    expect(core.allEven(badInput)).toEqual(false);
+    it("allEven([2, 4, 11]) should return false", () => {
+      var badInput = [2, 4, 11];
+      expect(core.allEven(badInput)).toEqual(false);
+    });
   });
 
-  it("#positiveMatrix", function() {
-    var goodInput = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
-    expect(core.positiveMatrix(goodInput)).toEqual(true);
+  describe("#isEveryElementPositive", function() {
+    it("isEveryElementPositive([[1, 2], [4, 5]]) should return true", function() {
+      var goodInput = [[1, 2], [4, 5]];
+      expect(core.isEveryElementPositive(goodInput)).toEqual(true);
+    });
 
-    var badInput = [[-1, 2, 3], [4, -5, 6], [7, 8, -9]];
-    expect(core.positiveMatrix(badInput)).toEqual(false);
+    it("isEveryElementPositive([[1, -2], [4, 5]]) should return false", function() {
+      var badInput = [[1, -2], [4, 5]];
+      expect(core.isEveryElementPositive(badInput)).toEqual(false);
+    });
   });
 });

@@ -2,12 +2,12 @@ function onlyEven(array) {
   return array;
 }
 
-function onlyOneWord(array) {
+function onlySingleWord(array) {
   return array;
 }
 
 function positiveRowsOnly(array) {
-  return array; //(hint: use Array.prototype.some())
+  return array;
 }
 
 function truthyValuesOnly(array) {
@@ -16,7 +16,7 @@ function truthyValuesOnly(array) {
 
 module.exports = {
   onlyEven: onlyEven,
-  onlyOneWord: onlyOneWord,
+  onlySingleWord: onlySingleWord,
   positiveRowsOnly: positiveRowsOnly,
   truthyValuesOnly: truthyValuesOnly
 };
