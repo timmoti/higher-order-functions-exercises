@@ -1,13 +1,19 @@
 function sum(array) {
-  return array;
+  return array.reduce((accumulator, element) => accumulator + element);
 }
 
-function productAll(array) {
-  return array;
+function productArray(array) {
+  return array.reduce((accumulator, element) => accumulator * element)
+}
+
+function productAll(matrix) {
+  let reducedArray = matrix.map(productArray);
+  return reducedArray.reduce((accumulator, element) => accumulator * element);
 }
 
 function luckyNumbers(array) {
-  return array;
+  const numString = array.reduce((accumulator, element) => accumulator + ', ' + element);
+  return `Your lucky numbers are: ${numString}.`;
 }
 
 module.exports = {

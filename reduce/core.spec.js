@@ -1,6 +1,6 @@
 var core = require("./core");
 
-describe.skip("Reduce", function() {
+describe("Reduce", function() {
   describe("#sum()", function() {
     it("sum all the numbers in the array", function() {
       var input = [10, 15, 20, 25, 30, 35];
